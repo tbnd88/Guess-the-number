@@ -24,7 +24,7 @@ def easy_mode():
 					score = score - 10
 				else:
 					score = 0
-		elif guess == 'q':
+		elif guess.lower() == 'q':
 				return end()
 		else:
 			print('Invaid input')
@@ -53,7 +53,7 @@ def medium_mode():
 					score = score - 5
 				else:
 					score = 0
-		elif guess == 'q':
+		elif guess.lower() == 'q':
 				return end()
 		else:
 			print('Invalid input')
@@ -82,7 +82,7 @@ def hard_mode():
 					score = score - 1
 				else:
 					score = 0
-		elif guess == 'q':
+		elif guess.lower() == 'q':
 			return end()
 		else:
 			print('Invalid input')
