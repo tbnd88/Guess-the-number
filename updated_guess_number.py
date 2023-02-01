@@ -1,12 +1,13 @@
 import random
 import time
+import sys
 
 def easy_mode():
 	score = 100
 	answerEasy = random.randrange(1,11)
 	while True:
 
-		guess = input('0-10 or q to quit\n')
+		guess = input('1-10 or q to quit\n')
 		if guess.isdigit():
 
 			if int(guess) == answerEasy:
@@ -33,9 +34,9 @@ def easy_mode():
 def medium_mode():
 	score = 100
 	answerMedium = random.randrange(1,101)
-	
+
 	while True:
-		guess = input('0-100 or q to quit\n')
+		guess = input('1-100 or q to quit\n')
 		if guess.isdigit():
 
 			if int(guess) == answerMedium:
@@ -64,7 +65,7 @@ def hard_mode():
 	answerHard	= random.randrange(1,1001)
 
 	while True:
-		guess = input('0-1000 or q to quit\n')
+		guess = input('1-1000 or q to quit\n')
 		if guess.isdigit():
 
 			if int(guess) == answerHard:
@@ -91,21 +92,21 @@ def hard_mode():
 def end():
 	print('Thanks for playing!')
 	time.sleep(2)
-	quit()
+	sys.exit()
 
 def play_again():
 	playAgain = input('Would you like to play again?')
 	if playAgain == 'y' or playAgain.lower == 'yes':
 		main()
 	elif playAgain == 'n' or playAgain.lower == 'no':
-		return end()
+		end()
 	else:
 		print('Please choose y or n')
 		play_again()
 
 def main():
 	chooseMode = int(input("Choose a difficulty: 1,2,3\n"))
-	
+
 	if chooseMode == 1:
 		easy_mode()
 	elif chooseMode == 2:
